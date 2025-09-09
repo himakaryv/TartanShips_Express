@@ -2,7 +2,7 @@
 <html lang="en">
 <head>
   <meta charset="UTF-8">
-  <title>Choose Speed | TartanShips Express</title>
+  <title>Choose Delivery Speed | TartanShips Express</title>
   <link rel="stylesheet" href="styles.css">
 </head>
 <body>
@@ -18,13 +18,18 @@
     <section>
       <h2><span class="icon-truck"></span> Choose Delivery Speed</h2>
       <form action="payment.html" method="get" class="form-section">
+        <!-- Only "Overnight" is enabled, the others are disabled per assignment instruction -->
         <label>
-          <input type="radio" name="speed" value="standard" checked>
-          <span class="icon-clock"></span> Standard (2-4 days)
+          <input type="radio" name="speed" value="overnight" checked>
+          Overnight – $12.00
         </label>
         <label>
-          <input type="radio" name="speed" value="express">
-          <span class="icon-bolt"></span> Express (1 day)
+          <input type="radio" name="speed" value="2day" disabled>
+          2-day – $8.00
+        </label>
+        <label>
+          <input type="radio" name="speed" value="ground" disabled>
+          Ground – $4.99
         </label>
         <button type="submit" class="cta-btn">Next <span class="icon-arrow"></span></button>
       </form>
