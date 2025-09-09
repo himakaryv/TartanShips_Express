@@ -1,33 +1,15 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-  <meta charset="UTF-8">
-  <title>Payment | TartanShips Express</title>
-  <link rel="stylesheet" href="styles.css">
-</head>
-<body>
-  <header>
-    <h1><span class="icon-card"></span> TartanShips Express</h1>
-    <nav>
-      <a href="index.html">Home</a>
-      <a href="package.html">Package Info</a>
-      <a href="speed.html">Delivery Speed</a>
-      <a href="payment.html" class="active">Payment</a>
-    </nav>
-  </header>
-  <main>
-    <section>
-      <h2><span class="icon-card"></span> Payment Details</h2>
-      <form action="success.html" method="get" class="form-section">
-        <label>Card Number <input type="text" pattern="\d{16}" maxlength="16" required></label>
-        <label>Expiry <input type="text" placeholder="MM/YY" required></label>
-        <label>CVC <input type="text" maxlength="4" required></label>
-        <button type="submit" class="cta-btn">Pay & Ship <span class="icon-arrow"></span></button>
-      </form>
-    </section>
-  </main>
-  <footer>
-    <p>© 2025 TartanShips Express</p>
-  </footer>
-</body>
-</html>
+<form action="success.html" method="get" class="form-section" autocomplete="off">
+  <label>
+    Card Number
+    <input type="text" name="card" maxlength="24" pattern="[0-9\s]*" inputmode="numeric" required autocomplete="off">
+  </label>
+  <label>
+    Expiry
+    <input type="text" name="exp" maxlength="7" placeholder="MM/YY" pattern="^(0[1-9]|1[0-2])\/\d{2}$" required autocomplete="off">
+  </label>
+  <label>
+    CVC
+    <input type="text" name="cvc" maxlength="4" pattern="[0-9]*" inputmode="numeric" required autocomplete="off">
+  </label>
+  <button type="submit" class="cta-btn">Pay & Ship <span class="icon-arrow"></span></button>
+</form>
